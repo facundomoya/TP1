@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Agregar alumnos</title>
+</head>
+<body>
+    <main>
+        <section class="flex">
+            <section class="menu">
+                <h3>Trabajo Práctico 1</h3>
+                <a href="index.html"><p>Pagina principal</p></a>
+                <a href="students.html"><p class="menu-item">Alumnos</p></a>
+            </section>
+            <article>
+                <div class="order-title-button">
+                    <h2>Agregar alumnos</h2>
+                    <a href="student_list.html"><button id="back-button">Atrás</button></a> 
+                </div>                       
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <label for="surname">Apellido:</label>                         
+                        </div>
+                        <div class="form-group">                   
+                            <input type="text" id="name" name="name" required>                           
+                            <input type="text" id="surname" name="surname" required>                                                               
+                        </div>
+                        <div>
+                            <button class="create-button">Agregar</button>
+                        </div>                       
+                    </form>
+                </div>                
+            </article>           
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script_form.js"></script>
+</body>
+</html>

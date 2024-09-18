@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Alumnos</title>
+</head>
+<body>
+    <main>
+        <section class="flex">
+            <section class="menu">
+                <h3>Trabajo Práctico 1</h3>
+                <a href="index.html"><p>Pagina principal</p></a>
+                <a href="students.html"><p class="menu-item">Alumnos</p></a>
+            </section>
+            <article>
+                <div class="order-title-button">
+                    <h2>Alumnos</h2>
+                    <a href="student_form.html"><button class="create-button">Agregar</button></a> 
+                </div>   
+                    <div>
+                        <input id="search" type="text" placeholder="Buscar por apellido">
+                        <button id="search-button">Buscar</button>   
+                    </div>
+                    <div id="order-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Legajo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>                 
+            </article>           
+        </section>
+    </main>
+    <script src="js/script_list.js"></script>
+</body>
+</html>
