@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tbody = document.querySelector('tbody');
     const searchInput = document.getElementById('search');
     const searchButton = document.querySelector('#search-button');
-    console.log(searchButton)
+
     function displayStudents(students) {   
         tbody.innerHTML = '';
         students.forEach(student => {
