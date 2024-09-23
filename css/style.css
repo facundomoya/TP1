@@ -121,3 +121,23 @@ form{
 form div button{
     margin: 15px 0px;
 }
+
+.pagination{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    padding-right: 15px;
+}
+
+#pag-index {
+    width: 20px; 
+    height: 15px;
+    border: 2px solid green;  
+    text-align: center; 
+    background-color: green;
+}
+
+#pag-btn{
+    width: 20px;
+    border-radius: 5px;
+}
