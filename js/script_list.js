@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const tbody = document.querySelector('tbody');
     const searchInput = document.getElementById('search');
-    const searchButton = document.getElementById('search-button');
     const pagOptions = document.getElementById('pag-options');
     const pagIndex = document.getElementById('pag-index');
 
@@ -16,15 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const end = start + itemsPerPage;
         const studentsToDisplay = filteredStudents.slice(start, end);
 
-        studentsToDisplay.forEach(student => {
+        if (studentsToDisplay.length === 0) {
             const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${student.name}</td>
-                <td>${student.surname}</td>
-                <td>${student.legajo}</td>
-            `;
+            const cell = document.createElement('td');
+            cell.colSpan = 3;
+            cell.textContent = "No se encontraron estudiantes.";
+            row.appendChild(cell);
             tbody.appendChild(row);
-        });
+        } else {
+            studentsToDisplay.forEach(student => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${student.name}</td>
+                    <td>${student.surname}</td>
+                    <td>${student.legajo}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
         
         pagIndex.value = currentPage;
     }
@@ -68,9 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updatePagination();
     });
 
-    displayStudents();
-
-    searchButton.addEventListener('click', () => {
+    // Filtrar estudiantes a medida que se escribe
+    searchInput.addEventListener('input', () => {
         const searchTerm = searchInput.value.trim().toLowerCase();
         filteredStudents = students.filter(student => 
             student.surname.toLowerCase().includes(searchTerm)
@@ -78,4 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPage = 1; 
         updatePagination();
     });
+
+    displayStudents();
 });
