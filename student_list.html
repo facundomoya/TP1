@@ -11,31 +11,46 @@
         <section class="flex">
             <section class="menu">
                 <h3>Trabajo Práctico 1</h3>
-                <a href="index.html"><p>Pagina principal</p></a>
-                <a href="students.html"><p class="menu-item">Alumnos</p></a>
+                <a href="index.html"><p>Página principal</p></a>
+                <a href="student_list.html"><p class="menu-item">Alumnos</p></a>
             </section>
             <article>
                 <div class="order-title-button">
                     <h2>Alumnos</h2>
                     <a href="student_form.html"><button class="create-button">Agregar</button></a> 
                 </div>   
-                    <div>
-                        <input id="search" type="text" placeholder="Buscar por apellido">
-                        <button id="search-button">Buscar</button>   
-                    </div>
-                    <div id="order-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Legajo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>                 
+                <div>
+                    <input id="search" type="text" placeholder="Buscar por apellido">
+                    <button id="search-button">Buscar</button>   
+                </div>
+                <div id="order-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Legajo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <input type="button" value="<<" id="pag-btn-first">
+                    <input type="button" value="<" id="pag-btn-prev">
+                    <input type="number" name="pag-index" id="pag-index" value="1" readonly>
+                    <input type="button" value=">" id="pag-btn-next">
+                    <input type="button" value=">>" id="pag-btn-last">
+                    <select id="pag-options" name="pag-options">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                    <p>Items por página: </p>
+                </div>          
             </article>           
         </section>
     </main>
