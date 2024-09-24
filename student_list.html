@@ -37,7 +37,11 @@
                         </table>
                     </div>
                     <div class="pagination">
+                        <input  type="button" value=">>" id="pag-btn" onclick="goToLastPage()">
+                        <input  type="button" value=">" id="pag-btn" onclick="increasePageNumber()">
                         <input type="number" name="pag-index" id="pag-index" value="1" readonly>
+                        <input  type="button" value="<" id="pag-btn" onclick="decreasePageNumber()">
+                        <input  type="button" value="<<" id="pag-btn" onclick="goToFirtsPage()">
                         <select id="pag-options" name="pag-options">
                           <option value="3">3</option>
                           <option value="5">5</option>
@@ -46,7 +50,7 @@
                           <option value="20">20</option>
                         </select>
                         <p>Items por pagina: </p>
-                      </div>                 
+                      </div>          
             </article>           
         </section>
     </main>

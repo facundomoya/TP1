@@ -126,18 +126,15 @@ form div button{
     display: flex;
     width: 100%;
     flex-direction: row-reverse;
-    padding-right: 15px;
-}
-
-#pag-index {
-    width: 20px; 
-    height: 15px;
-    border: 2px solid green;  
-    text-align: center; 
-    background-color: green;
-}
-
-#pag-btn{
+    padding: 7px;
+    margin: 0px 65px 0px 0px;
+  }
+  
+  #pag-btn{
     width: 20px;
-    border-radius: 5px;
-}
+  }
+  
+  #pag-index{
+    width: 20px;
+    text-align: center;
+  }
