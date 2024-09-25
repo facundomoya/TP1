@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updatePagination();
     });
 
-    // Filtrar estudiantes a medida que se escribe
     searchInput.addEventListener('input', () => {
         const searchTerm = searchInput.value.trim().toLowerCase();
         filteredStudents = students.filter(student => 
