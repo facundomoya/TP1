@@ -124,17 +124,18 @@ form div button{
 
 .pagination{
     display: flex;
-    width: 100%;
+    width: 96%;
     flex-direction: row-reverse;
-    padding: 7px;
-    margin: 0px 65px 0px 0px;
+    padding: 5px;
+    margin: 5px 65px 0px 0px;
   }
   
   #pag-btn{
-    width: 20px;
+    width: 30px;
   }
   
   #pag-index{
-    width: 20px;
+    width: 30px;
     text-align: center;
-  }
+    background-color: green;
+}
